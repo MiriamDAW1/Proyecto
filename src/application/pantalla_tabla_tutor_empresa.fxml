@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="143.0" layoutY="363.0" mnemonicParsing="false" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
+      <Button layoutX="234.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="93.0" text="MODIFICAR " textFill="#c9779b" />
+      <Button layoutX="365.0" layoutY="363.0" mnemonicParsing="false" text="ELIMINAR" textFill="#c9779b" />
+      <Button layoutX="485.0" layoutY="363.0" mnemonicParsing="false" text="MOSTRAR" textFill="#c9779b" />
+      <TableView layoutX="14.0" layoutY="16.0" prefHeight="333.0" prefWidth="715.0">
+        <columns>
+          <TableColumn prefWidth="110.0" text="DNI representate" />
+            <TableColumn prefWidth="85.0" text="Nombre" />
+            <TableColumn prefWidth="59.0" text="Apellido" />
+            <TableColumn prefWidth="67.0" text="Telefono" />
+            <TableColumn prefWidth="85.0" text="Nacionalidad" />
+            <TableColumn prefWidth="61.0" text="Provincia" />
+            <TableColumn prefWidth="62.0" text="Localidad" />
+            <TableColumn prefWidth="110.0" text="Correo electronico" />
+            <TableColumn prefWidth="78.0" text="ID Convenio" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

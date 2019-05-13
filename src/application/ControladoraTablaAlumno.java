@@ -8,9 +8,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -110,24 +112,15 @@ public class ControladoraTablaAlumno {
  	}
 	
 	public void Modificar(ActionEvent event) throws IOException{
-		/*Alumno Alumno = new Alumno("","", "", "", "", "", "", "", "");
-		ColDNI_Alumno.setText(Alumno.getDNI_Alumno());
-		ColNombre.setText(Alumno.getNombre());
-		ColApellido.setText(Alumno. getApellido());
-		ColTelefono.setText(Alumno.getTelefono());
-		ColProvincia.setText(Alumno.getProvincia());
-		ColLocalidad.setText(Alumno.getLocalidad());
-		ColCorreoelectronico.setText(Alumno.getCorreoelectronico());
-		ColNacionalidad.setText(Alumno.getNacionalidad());
-		ColDNI_Tutor.setText(Alumno.getDNI_Tutor());*/
 		
-		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_4_anadir_alumno.fxml"));
+		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_4_modificar_alumno.fxml"));
  		AnchorPane ventanaDos = (AnchorPane) loader.load();
          Stage ventana = new Stage();
          ventana.setTitle("Modificar Alumno");
          Scene scene = new Scene(ventanaDos);
          ventana.setScene(scene);
          ventana.show();
+         
  	}
 	
 	public void Eliminar(ActionEvent event) throws IOException{

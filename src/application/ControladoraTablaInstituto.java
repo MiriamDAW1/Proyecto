@@ -115,19 +115,6 @@ public class ControladoraTablaInstituto {
  	}
 	
 	public void Modificar(ActionEvent event) throws IOException{
-		/*Alumno Alumno = new Alumno("","", "", "", "", "", "", "", "");
-		ID_Instituto.setText(Instituto.getDNI_Alumno());
-		NombreCentro.setText(Instituto.getNombre());
-		Profesor_Tutor.setText(Instituto. getApellido());
-		FAX.setText(Instituto.getTelefono());
-		Director.setText(Instituto.getProvincia());
-		NIFDirector.setText(Instituto.getLocalidad());
-		Telefono.setText(Instituto.getCorreoelectronico());
-		Direccion.setText(Instituto.getNacionalidad());
-		Poblacion.setText(Instituto.getDNI_Tutor());
-		DAT.setText(Instituto.getDNI_Tutor());
-		Ciudad.setText(Instituto.getDNI_Tutor());
-		CP.setText(Instituto.getDNI_Tutor());*/
 		
 		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_anadir_instituto.fxml"));
  		AnchorPane ventanaDos = (AnchorPane) loader.load();

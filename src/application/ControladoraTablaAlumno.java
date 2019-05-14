@@ -26,9 +26,6 @@ public class ControladoraTablaAlumno {
 	private Button Modificar;
 	
 	@FXML
-	private Button Eliminar;
-	
-	@FXML
 	private Button Mostrar;
 	
 	@FXML
@@ -70,8 +67,6 @@ public class ControladoraTablaAlumno {
 	private ObservableList<Alumno> Alumnos = FXCollections.observableArrayList();
 	
 	private Main ProgramaPrincipal;
-	
-	private int posicionAlumno;
 	   
 	@FXML
 	public void initialize() {
@@ -92,7 +87,8 @@ public class ControladoraTablaAlumno {
 	}
 	
 	public void Mostrar(ActionEvent event) {
-	       System.out.println("Button Clicked!");
+		
+	       System.out.println("Mostrar Alumno");
 	       
 	       Conexion conexionBBDD = new Conexion();
 	       
@@ -101,7 +97,9 @@ public class ControladoraTablaAlumno {
     }
 	
 	public void Anadir(ActionEvent event) throws IOException{
-
+		
+		System.out.println("Añadir Alumno");
+		
  		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_4_anadir_alumno.fxml"));
  		AnchorPane ventanaDos = (AnchorPane) loader.load();
          Stage ventana = new Stage();
@@ -113,17 +111,22 @@ public class ControladoraTablaAlumno {
 	
 	public void Modificar(ActionEvent event) throws IOException{
 		
+		System.out.println("Modificar Alumno");
+		
+		Alumno selectedAlumno = Tabla.getSelectionModel().getSelectedItem();
+		
 		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_4_modificar_alumno.fxml"));
  		AnchorPane ventanaDos = (AnchorPane) loader.load();
          Stage ventana = new Stage();
+         ControladoraModificarAlumno controller = loader.getController();
+         controller.setAlumno(selectedAlumno);
          ventana.setTitle("Modificar Alumno");
          Scene scene = new Scene(ventanaDos);
          ventana.setScene(scene);
          ventana.show();
          
  	}
+		
+  }
 	
-	public void Eliminar(ActionEvent event) throws IOException{
-		Alumnos.remove(posicionAlumno);
-	}
-}
+

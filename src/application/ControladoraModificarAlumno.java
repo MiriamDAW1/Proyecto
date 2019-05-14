@@ -89,7 +89,7 @@ public class ControladoraModificarAlumno {
 	        if (datosValidos()) {
 	            Conexion conexionBBDD = new Conexion();
 	            try {
-					conexionBBDD.InsertarAlumno(DNI_AlumnoTextField.getText(), NombreTextField.getText(), ApellidoTextField.getText(), TelefonoTextField.getText(), ProvinciaTextField.getText(), LocalidadTextField.getText(), CorreoelectronicoTextField.getText(), NacionalidadTextField.getText(), DNI_TutorTextField.getText(), NumAlumnosTextField.getText(), NotaTextField.getText());
+					conexionBBDD.ModificarAlumno(DNI_AlumnoTextField.getText(), NombreTextField.getText(), ApellidoTextField.getText(), TelefonoTextField.getText(), ProvinciaTextField.getText(), LocalidadTextField.getText(), CorreoelectronicoTextField.getText(), NacionalidadTextField.getText(), DNI_TutorTextField.getText(), NumAlumnosTextField.getText(), NotaTextField.getText());
 				} catch (SQLException e) {
 					// TODO Bloque catch generado automáticamente
 					e.printStackTrace();

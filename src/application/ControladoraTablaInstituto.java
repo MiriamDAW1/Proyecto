@@ -126,6 +126,6 @@ public class ControladoraTablaInstituto {
  	}
 	
 	public void Eliminar(ActionEvent event) throws IOException{
-		Instituto.remove(posicionInstituto);
+		//Instituto.remove(posicionInstituto);
 	}
 }

@@ -93,7 +93,7 @@ public class Main extends Application {
 		}
 	}
 	
-	public boolean Modificar(Alumno Alumno) {
+	/*public boolean Modificar(Alumno Alumno) {
         try {
             // Load the fxml file and create a new stage for the popup dialog.
             FXMLLoader loader = new FXMLLoader();
@@ -121,7 +121,6 @@ public class Main extends Application {
         } catch (IOException e) {
             e.printStackTrace();
             return false;
-        }
+        }*/
     }
-	
-}
+

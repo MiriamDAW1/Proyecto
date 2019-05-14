@@ -109,10 +109,10 @@ public class Conexion {
 		return num;
 	}
 	
-	public static int Modificararmario() throws SQLException{
+	public static int ModificarAlumno(String DNI_Alumno, String  Nombre, String  Apellido, String  Telefono, String  Provincia,  String  Localidad, String  Correoelectronico, String  Nacionalidad, String  DNI_Tutor, String NumAlumnos, String Nota) throws SQLException{
 		Statement stmt = Conexion.createStatement();
-		System.out.println("UDATE MIRIAM.ARMARIO SET numarmario =3");
-		int num =stmt.executeUpdate("UDATE MIRIAM.ARMARIO SET tipoarmario='XL");
+		System.out.println("UPDATE " + Schema + " .ALUMNO SET DNI_Alumno=" + "'" + DNI_Alumno + "'" + "," + "Nombre=" +  "'" + Nombre + "'" + "," +  "Apellido="  +  "'" + Apellido + "'" + "," + "Telefono="  +  "'" + Telefono  +  "'"  + "," + "Provincia="  +  "'" + Provincia  +  "'" + "," + "Localidad="  +  "'" + Localidad  +  "'" + "," + "Correoelectronico="  +  "'" + Correoelectronico  +  "'" + "," + "Nacionalidad="  +  "'" + Nacionalidad  +  "'" + "," + "DNI_Tutor="  +  "'" + DNI_Tutor  +  "'" + "," + "NumAlumnos="  +  "'" + NumAlumnos  +  "'" + "," + "Nota=" +  "'" + Nota  +  "'" + "WHERE DNI_Alumno=" + "'" + DNI_Alumno + "'");
+		int num =stmt.executeUpdate("UPDATE " + Schema + " .ALUMNO SET DNI_Alumno=" + "'" + DNI_Alumno + "'" + "," + "Nombre=" +  "'" + Nombre + "'" + "," +  "Apellido="  +  "'" + Apellido + "'" + "," + "Telefono="  +  "'" + Telefono  +  "'"  + "," + "Provincia="  +  "'" + Provincia  +  "'" + "," + "Localidad="  +  "'" + Localidad  +  "'" + "," + "Correoelectronico="  +  "'" + Correoelectronico  +  "'" + "," + "Nacionalidad="  +  "'" + Nacionalidad  +  "'" + "," + "DNI_Tutor="  +  "'" + DNI_Tutor  +  "'" + "," + "NumAlumnos="  +  "'" + NumAlumnos  +  "'" + "," + "Nota=" +  "'" + Nota  +  "'" + "WHERE DNI_Alumno=" + "'" + DNI_Alumno + "'");
 		return num;
 	}
 	

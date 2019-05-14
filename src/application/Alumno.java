@@ -1,5 +1,7 @@
 package application;
 
+import java.util.List;
+
 import javafx.collections.ObservableList;
 
 public class Alumno {
@@ -15,8 +17,6 @@ public class Alumno {
 	private String DNI_Tutor;
 	private String NumAlumnos;
 	private String Nota;
-	
-	private ObservableList<Alumno> AlumnoData;
 	
 	public Alumno(String dNI_Alumno, String nombre, String apellido, String telefono, String provincia,
 			String localidad, String correoelectronico, String nacionalidad, String dNI_Tutor, String numAlumnos,
@@ -122,8 +122,9 @@ public class Alumno {
 	public void setNota(String nota) {
 		Nota = nota;
 	}
-	
-	public void setPersonData(ObservableList<Alumno> AlumnoData){
-    	this.AlumnoData = AlumnoData;
-    }
+
+	public static ObservableList<Alumno> getAlumnoData() {
+		// TODO Apéndice de método generado automáticamente
+		return null;
+	}
 }

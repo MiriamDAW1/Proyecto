@@ -1,25 +1,23 @@
-
-	package application;
+package application;
 
 	import javafx.collections.ObservableList;
 
 	public class Ciclo {
 
-		private int ID_ciclo;
-		private int numdecurso;
+		private String ID_ciclo;
+		private String numdecurso;
 		private String Cicloformativo;
 		private String Familiaprofesional;
-		private String  Capacidadesterminales;
-		private String  Actividadesformativos;
-		private String  Criterioevaluación;
+		private String Capacidadesterminales;
+		private String Actividadesformativos;
+		private String Criterioevaluación;
 		
-		private ObservableList<Ciclo> CicloData;
 
-		public Ciclo(int iD_ciclo, int numdecurso, String cicloformativo, String familiaprofesional,
+		public Ciclo(String iD_ciclo, String numdecurso, String cicloformativo, String familiaprofesional,
 				String capacidadesterminales, String actividadesformativos, String criterioevaluación) {
 			super();
 			ID_ciclo = iD_ciclo;
-			this.numdecurso = numdecurso;
+			numdecurso = numdecurso;
 			Cicloformativo = cicloformativo;
 			Familiaprofesional = familiaprofesional;
 			Capacidadesterminales = capacidadesterminales;
@@ -27,19 +25,19 @@
 			Criterioevaluación = criterioevaluación;
 		}
 
-		public int getID_ciclo() {
+		public String getID_ciclo() {
 			return ID_ciclo;
 		}
 
-		public void setID_ciclo(int iD_ciclo) {
+		public void setID_ciclo(String iD_ciclo) {
 			ID_ciclo = iD_ciclo;
 		}
 
-		public int getNumdecurso() {
+		public String getNumdecurso() {
 			return numdecurso;
 		}
 
-		public void setNumdecurso(int numdecurso) {
+		public void setNumdecurso(String numdecurso) {
 			this.numdecurso = numdecurso;
 		}
 
@@ -83,12 +81,4 @@
 			Criterioevaluación = criterioevaluación;
 		}
 
-		public ObservableList<Ciclo> getCicloData() {
-			return CicloData;
-		}
-
-		public void setCicloData(ObservableList<Ciclo> cicloData) {
-			CicloData = cicloData;
-		}
 }
-

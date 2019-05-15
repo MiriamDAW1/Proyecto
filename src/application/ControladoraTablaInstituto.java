@@ -24,9 +24,6 @@ public class ControladoraTablaInstituto {
 	private Button Modificar;
 	
 	@FXML
-	private Button Eliminar;
-	
-	@FXML
 	private Button Mostrar;
 	
 	@FXML
@@ -68,13 +65,9 @@ public class ControladoraTablaInstituto {
 	@FXML
 	private TableColumn<Alumno,String>   CP;
 	
-	
 	private ObservableList<Instituto> Institutos = FXCollections.observableArrayList();
 	
     private Main ProgramaPrincipal;
-	
-	private int posicionInstituto;
-	
 	
 	@FXML
 	public void initialize() {
@@ -96,7 +89,8 @@ public class ControladoraTablaInstituto {
 	}
 	
 	public void Mostrar(ActionEvent event) {
-	       System.out.println("Button Clicked!");
+		
+		   System.out.println("Mostrar Instituto");
 	       
 	       Conexion conexionBBDD = new Conexion();
 	       
@@ -104,7 +98,9 @@ public class ControladoraTablaInstituto {
    }
 	
 	public void Anadir(ActionEvent event) throws IOException{
-
+		
+		System.out.println("Añadir Instituto");
+		
  		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_anadir_instituto.fxml"));
  		AnchorPane ventanaDos = (AnchorPane) loader.load();
          Stage ventana = new Stage();
@@ -116,16 +112,19 @@ public class ControladoraTablaInstituto {
 	
 	public void Modificar(ActionEvent event) throws IOException{
 		
-		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_anadir_instituto.fxml"));
+
+		System.out.println("Modificar Instituto");
+		
+		Instituto selectedInstituto = Tabla.getSelectionModel().getSelectedItem();
+		
+		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_modificar_instituto.fxml"));
  		AnchorPane ventanaDos = (AnchorPane) loader.load();
          Stage ventana = new Stage();
+         ControladoraModificarInstituto controller = loader.getController();
+         controller.setInstituto(selectedInstituto);
          ventana.setTitle("Modificar Instituto");
          Scene scene = new Scene(ventanaDos);
          ventana.setScene(scene);
          ventana.show();
- 	}
-	
-	public void Eliminar(ActionEvent event) throws IOException{
-		//Instituto.remove(posicionInstituto);
 	}
 }

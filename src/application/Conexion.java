@@ -162,9 +162,60 @@ public class Conexion {
 		return num;
 	}
 	
-
-	public static PreparedStatement prepareStatement(String consultar) {
-		// TODO Apéndice de método generado automáticamente
-		return null;
+	public static int ModificarInstituto(String iD_Instituto, String nombreCentro, String profesor_Tutor, String fAX, String director,
+			String nIFDirector, String telefono, String direccion, String poblacion, String dAT, String ciudad,
+			String cP) throws SQLException{
+		Statement stmt = Conexion.createStatement();
+		System.out.println("UPDATE " + Schema + " .INSTITUTO SET ID_Instituto=" + iD_Instituto + "," + "NombreCentro=" +  "'" + nombreCentro + "'" + "," +  "Profesor_Tutor="  +  "'" + profesor_Tutor + "'" + "," + "FAX=" + fAX + "," + "Director="  +  "'" + director  +  "'" + "," + "NIFDirector="  +  "'" + nIFDirector  +  "'" + "," + "Telefono=" + telefono  + "," + "Direccion="  +  "'" + direccion  +  "'" + "," + "Poblacion="  +  "'" + poblacion  +  "'" + "," + "DAT="  +  "'" + dAT  +  "'" + "," + "Ciudad=" +  "'" + ciudad  +  "'" + "," + "CP=" + cP  + " WHERE ID_Instituto="+ iD_Instituto);
+		int num =stmt.executeUpdate("UPDATE " + Schema + " .INSTITUTO SET ID_Instituto=" + iD_Instituto + "," + "NombreCentro=" +  "'" + nombreCentro + "'" + "," +  "Profesor_Tutor="  +  "'" + profesor_Tutor + "'" + "," + "FAX=" + fAX + "," + "Director="  +  "'" + director  +  "'" + "," + "NIFDirector="  +  "'" + nIFDirector  +  "'" + "," + "Telefono=" + telefono  + "," + "Direccion="  +  "'" + direccion  +  "'" + "," + "Poblacion="  +  "'" + poblacion  +  "'" + "," + "DAT="  +  "'" + dAT  +  "'" + "," + "Ciudad=" +  "'" + ciudad  +  "'" + "," + "CP=" + cP  + " WHERE ID_Instituto=" + iD_Instituto );
+		return num;
 	}
+
+	public ObservableList<Ciclo> Consulta2() {
+		
+		ObservableList<Ciclo> aux = FXCollections.observableArrayList();
+			
+			try {
+				Statement stmt = Conexion.createStatement();
+				ResultSet rset = stmt.executeQuery("SELECT ID_ciclo, numdecurso,  Cicloformativo, Familiaprofesional, Capacidadesterminales, Actividadesformativos, "
+				+ "Criterioevaluación FROM " + Schema + ".INSTITUTO");
+				while(rset.next()) {
+					String ID_ciclo  = rset.getString(1);
+					String numdecurso = rset.getString(2); 
+					String Cicloformativo = rset.getString(3);
+					String Familiaprofesional  = rset.getString(4);
+					String Capacidadesterminales = rset.getString(5);
+					String Actividadesformativos = rset.getString(6);
+					String Criterioevaluación = rset.getString(7); 
+					Ciclo auxCiclo = new Ciclo(ID_ciclo, numdecurso,Cicloformativo,Familiaprofesional,Capacidadesterminales,Actividadesformativos,Criterioevaluación);
+					aux.add(auxCiclo);
+				}
+				rset.close();
+				stmt.close();
+				
+			}catch (SQLException s){
+				s.printStackTrace();
+			}
+			return aux;
+			
+		}
+	public static int InsertarCiclo(String iD_ciclo, String numdecurso, String cicloformativo, String familiaprofesional,
+			String capacidadesterminales, String actividadesformativos, String criterioevaluación) throws SQLException{
+	
+		Statement stmt = Conexion.createStatement();//Introduce los datos
+	
+		//INSERT INTO SCHEMA.NOMBRE_TABLA VALUES ();
+		System.out.println("INSERT INTO " + Schema + ".INSTITUTO VALUES (" + iD_ciclo + "," + "'" + numdecurso  +  "'" + "," + "'" + cicloformativo  +  "'" + "," +  familiaprofesional + "," + "'" + capacidadesterminales +  "'" + "," + "'" + actividadesformativos  + "'" + "," + criterioevaluación + ")");
+		int num = stmt.executeUpdate("INSERT INTO " + Schema + ".INSTITUTO VALUES (" + iD_ciclo + "," + "'" + numdecurso  +  "'" + "," + "'" + cicloformativo  +  "'" + "," +  familiaprofesional + "," + "'" + capacidadesterminales +  "'" + "," + "'" + actividadesformativos  + "'" + "," + criterioevaluación + ")");
+		return num;
+	}
+
+	public static int ModificarCiclo(String iD_ciclo, String numdecurso, String cicloformativo, String familiaprofesional,
+			String capacidadesterminales, String actividadesformativos, String criterioevaluación) throws SQLException{
+		Statement stmt = Conexion.createStatement();
+		System.out.println("UPDATE " + Schema + " .INSTITUTO SET ID_ciclo=" + iD_ciclo + "," + "numdecurso=" +  "'" + numdecurso + "'" + "," +  "cicloformativo="  +  "'" + cicloformativo + "'" + "," + "familiaprofesional=" + familiaprofesional + "," + "capacidadesterminales="  +  "'" + capacidadesterminales  +  "'" + "," + "actividadesformativos="  +  "'" + actividadesformativos  +  "'" + "," + "criterioevaluacion=" + criterioevaluación  + " WHERE ID_ciclo="+ iD_ciclo);
+		int num =stmt.executeUpdate("UPDATE " + Schema + " .INSTITUTO SET ID_ciclo=" + iD_ciclo + "," + "numdecurso=" +  "'" + numdecurso + "'" + "," +  "cicloformativo="  +  "'" + cicloformativo + "'" + "," + "familiaprofesional=" + familiaprofesional + "," + "capacidadesterminales="  +  "'" + capacidadesterminales  +  "'" + "," + "actividadesformativos="  +  "'" + actividadesformativos  +  "'" + "," + "criterioevaluacion=" + criterioevaluación  + " WHERE ID_ciclo="+ iD_ciclo);
+		return num;
+	}
+
 }

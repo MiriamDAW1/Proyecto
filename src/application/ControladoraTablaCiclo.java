@@ -23,10 +23,7 @@ public class ControladoraTablaCiclo {
 		
 		@FXML
 		private Button Modificar;
-		
-		@FXML
-		private Button Eliminar;
-		
+	
 		@FXML
 		private Button Mostrar;
 		
@@ -53,14 +50,13 @@ public class ControladoraTablaCiclo {
 		private TableColumn<Ciclo,String>  Actividadesformativos;
 		
 		@FXML
-		private TableColumn<Ciclo,String>  Criterioevaluación;
+		private TableColumn<Ciclo,String>  Criterioevaluacion;
 		
 		
-	   private ObservableList<Alumno> Alumnos = FXCollections.observableArrayList();
+	   private ObservableList<Ciclo> Ciclo = FXCollections.observableArrayList();
 		
 		private Main ProgramaPrincipal;
 		
-		private int posicionCiclo;
 		
 		@FXML
 		public void initialize() {
@@ -72,43 +68,48 @@ public class ControladoraTablaCiclo {
 			 Familiaprofesional.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Familiaprofesional"));
 			 Capacidadesterminales.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Capacidadesterminales"));
 			 Actividadesformativos.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Actividadesformativos"));
-			 Criterioevaluación.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Criterioevaluación"));	
+			 Criterioevaluacion.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Criterioevaluacion"));	
 		}
-		   
+		  
+		
 		public void Mostrar(ActionEvent event) {
-		       System.out.println("Button Clicked!");
+		       System.out.println("Mostrar Ciclo");
 		       
-		       Conexion conexionBBDD = new Conexion();
-		       
-		       //Tabla.setItems(conexionBBDD.Consulta2());   
-		       
+		       Conexion conexionBBDD = new Conexion();   
+		       Tabla.setItems(conexionBBDD.Consulta2());
 	   }
 		
+		
 		public void Anadir(ActionEvent event) throws IOException{
-
+			
+			System.out.println("Añadir Ciclo");
+			
 	 		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_anadir_Ciclos.fxml"));
 	 		AnchorPane ventanaDos = (AnchorPane) loader.load();
 	         Stage ventana = new Stage();
-	         ventana.setTitle("Nuevo Instituto");
+	         ventana.setTitle("Nuevo Ciclo");
 	         Scene scene = new Scene(ventanaDos);
 	         ventana.setScene(scene);
 	         ventana.show();
 	 	}
 		
-	   public void Modificar(ActionEvent event) throws IOException{
+		public void Modificar(ActionEvent event) throws IOException{
 			
-			FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_anadir_Ciclos.fxml"));
+			System.out.println("Modificar Ciclo");
+			
+			Ciclo selectedCiclo = Tabla.getSelectionModel().getSelectedItem();
+			
+			FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_modificar_Ciclos.fxml"));
 	 		AnchorPane ventanaDos = (AnchorPane) loader.load();
 	         Stage ventana = new Stage();
-	         ventana.setTitle("Modificar Instituto");
+	         ControladoraModificarCiclo controller = loader.getController();
+	         controller.setCiclo(selectedCiclo);
+	         ventana.setTitle("Modificar Ciclo");
 	         Scene scene = new Scene(ventanaDos);
 	         ventana.setScene(scene);
 	         ventana.show();
+	         
 	 	}
 		
-	   public void Eliminar(ActionEvent event) throws IOException{
-			Alumnos.remove(posicionCiclo);
-		}
+	  
 	}
-
-

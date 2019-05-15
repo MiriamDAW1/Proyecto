@@ -5,22 +5,21 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladoraTablaCiclo">
    <children>
-      <TableView layoutX="26.0" layoutY="25.0" prefHeight="309.0" prefWidth="758.0">
+      <TableView fx:id="Tabla" layoutX="26.0" layoutY="25.0" prefHeight="309.0" prefWidth="758.0">
         <columns>
-          <TableColumn prefWidth="68.0" text="ID_ciclo" />
-          <TableColumn prefWidth="79.0" text="numdecurso" />
-            <TableColumn prefWidth="94.0" text="Cicloformativo" />
-            <TableColumn prefWidth="114.0" text="Familiaprofesional" />
-            <TableColumn prefWidth="140.0" text="Capacidadesterminales" />
-            <TableColumn prefWidth="134.0" text="Actividadesformativos" />
+          <TableColumn fx:id="ID_ciclo" prefWidth="68.0" text="ID_ciclo" />
+          <TableColumn fx:id="numdecurso" prefWidth="79.0" text="numdecurso" />
+            <TableColumn fx:id="Cicloformativo" prefWidth="94.0" text="Cicloformativo" />
+            <TableColumn fx:id="Familiaprofesional" prefWidth="114.0" text="Familiaprofesional" />
+            <TableColumn fx:id="Capacidadesterminales" prefWidth="140.0" text="Capacidadesterminales" />
+            <TableColumn fx:id="Actividadesformativos" prefWidth="134.0" text="Actividadesformativos" />
             <TableColumn prefWidth="127.0" text="Criterioevaluación" />
         </columns>
       </TableView>
-      <Button layoutX="133.0" layoutY="353.0" mnemonicParsing="false" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
-      <Button layoutX="224.0" layoutY="353.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="93.0" text="MODIFICAR " textFill="#c9779b" />
-      <Button layoutX="355.0" layoutY="353.0" mnemonicParsing="false" text="ELIMINAR" textFill="#c9779b" />
-      <Button layoutX="475.0" layoutY="353.0" mnemonicParsing="false" text="MOSTRAR" textFill="#c9779b" />
+      <Button fx:id="Anadir" layoutX="190.0" layoutY="348.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="87.0" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
+      <Button fx:id="Modificar" layoutX="353.0" layoutY="348.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="103.0" text="MODIFICAR " textFill="#c9779b" />
+      <Button fx:id="Mostrar" layoutX="533.0" layoutY="348.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="87.0" text="MOSTRAR" textFill="#c9779b" />
    </children>
 </AnchorPane>

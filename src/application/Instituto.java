@@ -128,9 +128,4 @@ public class Instituto {
 	public void setCP(String cP) {
 		CP = cP;
 	}
-
-	public static void remove(int posicionInstituto) {
-		// TODO Apéndice de método generado automáticamente
-		
-	}
 }

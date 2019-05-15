@@ -169,5 +169,5 @@ public class ControladoraModificarAlumno {
 	            return false;
 	        }
 	        
-	    }
+	    }	
 }

@@ -52,4 +52,15 @@ public class Controladora2 {
 	      ventana.setScene(scene);
 	      ventana.show();
 	}
+	
+	public void Ciclo(ActionEvent event) throws IOException{
+		
+		  FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_tabla_ciclo.fxml"));
+	 	  AnchorPane ventanaDos = (AnchorPane) loader.load();
+	      Stage ventana = new Stage();
+	      ventana.setTitle("Ventana Ciclo");
+	      Scene scene = new Scene(ventanaDos);
+	      ventana.setScene(scene);
+	      ventana.show();
+	}
 }

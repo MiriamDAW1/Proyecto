@@ -39,7 +39,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="Ciclo" layoutX="340.0" layoutY="254.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="193.0" text="CICLO">
+      <Button fx:id="Ciclo" layoutX="340.0" layoutY="254.0" mnemonicParsing="false" onAction="#Ciclo" prefHeight="100.0" prefWidth="193.0" text="CICLO">
          <graphic>
             <ImageView fitHeight="91.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
                <image>

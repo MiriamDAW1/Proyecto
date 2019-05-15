@@ -23,9 +23,8 @@
             <TableColumn fx:id="CP" prefWidth="40.0" text="CP" />
         </columns>
       </TableView>
-      <Button fx:id="Anadir" layoutX="118.0" layoutY="356.0" mnemonicParsing="false" onAction="#Anadir" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
-      <Button fx:id="Modificar" layoutX="215.0" layoutY="356.0" mnemonicParsing="false" onAction="#Modificar" prefHeight="25.0" prefWidth="93.0" text="MODIFICAR " textFill="#c9779b" />
-      <Button fx:id="Eliminar" layoutX="344.0" layoutY="356.0" mnemonicParsing="false" onAction="#Eliminar" text="ELIMINAR" textFill="#c9779b" />
-      <Button fx:id="Mostrar" layoutX="451.0" layoutY="356.0" mnemonicParsing="false" onAction="#Mostrar" text="MOSTRAR" textFill="#c9779b" />
+      <Button fx:id="Anadir" layoutX="192.0" layoutY="353.0" mnemonicParsing="false" onAction="#Anadir" prefHeight="57.0" prefWidth="99.0" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
+      <Button fx:id="Modificar" layoutX="384.0" layoutY="353.0" mnemonicParsing="false" onAction="#Modificar" prefHeight="57.0" prefWidth="112.0" text="MODIFICAR " textFill="#c9779b" />
+      <Button fx:id="Mostrar" layoutX="592.0" layoutY="358.0" mnemonicParsing="false" onAction="#Mostrar" prefHeight="57.0" prefWidth="99.0" text="MOSTRAR" textFill="#c9779b" />
    </children>
 </AnchorPane>

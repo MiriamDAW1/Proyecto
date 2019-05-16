@@ -21,7 +21,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="Empresa" layoutX="76.0" layoutY="254.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="199.0" text="EMPRESA">
+      <Button fx:id="Empresa" layoutX="76.0" layoutY="254.0" mnemonicParsing="false" onAction="#Empresa" prefHeight="100.0" prefWidth="199.0" text="EMPRESA">
          <graphic>
             <ImageView fitHeight="92.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                <image>

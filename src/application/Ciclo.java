@@ -10,19 +10,19 @@ package application;
 		private String Familiaprofesional;
 		private String Capacidadesterminales;
 		private String Actividadesformativos;
-		private String Criterioevaluación;
+		private String Criterioevaluacion;
 		
 
 		public Ciclo(String iD_ciclo, String numdecurso, String cicloformativo, String familiaprofesional,
-				String capacidadesterminales, String actividadesformativos, String criterioevaluación) {
+				String capacidadesterminales, String actividadesformativos, String criterioevaluacion) {
 			super();
 			ID_ciclo = iD_ciclo;
-			numdecurso = numdecurso;
+			this.numdecurso = numdecurso;
 			Cicloformativo = cicloformativo;
 			Familiaprofesional = familiaprofesional;
 			Capacidadesterminales = capacidadesterminales;
 			Actividadesformativos = actividadesformativos;
-			Criterioevaluación = criterioevaluación;
+			Criterioevaluacion = criterioevaluacion;
 		}
 
 		public String getID_ciclo() {
@@ -73,12 +73,12 @@ package application;
 			Actividadesformativos = actividadesformativos;
 		}
 
-		public String getCriterioevaluación() {
-			return Criterioevaluación;
+		public String getCriterioevaluacion() {
+			return Criterioevaluacion;
 		}
 
-		public void setCriterioevaluación(String criterioevaluación) {
-			Criterioevaluación = criterioevaluación;
+		public void setCriterioevaluacion(String criterioevaluacion) {
+			Criterioevaluacion = criterioevaluacion;
 		}
 
 }

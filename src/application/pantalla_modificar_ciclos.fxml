@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladoraAnadirCiclo">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladoraModificarCiclo">
    <children>
       <ImageView fitHeight="600.0" fitWidth="650.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -20,7 +20,7 @@
             <Font name="Bernard MT Condensed" size="27.0" />
          </font>
       </Label>
-      <Label layoutX="10.0" layoutY="122.0" prefHeight="25.0" prefWidth="63.0" text="ID_ciclo">
+      <Label layoutX="10.0" layoutY="122.0" prefHeight="25.0" prefWidth="61.0" text="ID_ciclo">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -34,31 +34,31 @@
          </font>
       </Label>
       <TextField fx:id="numdecursoTextField" layoutX="193.0" layoutY="153.0" prefHeight="25.0" prefWidth="435.0" />
-      <Label layoutX="10.0" layoutY="187.0" prefHeight="25.0" prefWidth="119.0" text="Cicloformativo">
+      <Label layoutX="9.0" layoutY="187.0" prefHeight="25.0" prefWidth="119.0" text="Cicloformativo">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
       <TextField fx:id="CicloformativoTextField" layoutX="193.0" layoutY="187.0" prefHeight="25.0" prefWidth="435.0" />
-      <Label layoutX="10.0" layoutY="218.0" prefHeight="25.0" prefWidth="141.0" text="Familiaprofesional">
+      <Label layoutX="9.0" layoutY="218.0" prefHeight="25.0" prefWidth="141.0" text="Familiaprofesional">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
       <TextField fx:id="FamiliaprofesionalTextField" layoutX="193.0" layoutY="218.0" prefHeight="25.0" prefWidth="435.0" />
-      <Label layoutX="10.0" layoutY="250.0" prefHeight="25.0" prefWidth="180.0" text="Capacidadesterminales">
+      <Label layoutX="9.0" layoutY="250.0" prefHeight="25.0" prefWidth="180.0" text="Capacidadesterminales">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
       <TextField fx:id="CapacidadesterminalesTextField" layoutX="194.0" layoutY="250.0" prefHeight="25.0" prefWidth="435.0" />
-      <Label layoutX="10.0" layoutY="288.0" prefHeight="25.0" prefWidth="169.0" text="Actividadesformativos">
+      <Label layoutX="9.0" layoutY="288.0" prefHeight="25.0" prefWidth="169.0" text="Actividadesformativos">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
       <TextField fx:id="ActividadesformativosTextField" layoutX="193.0" layoutY="288.0" prefHeight="25.0" prefWidth="435.0" />
-      <Label layoutX="10.0" layoutY="325.0" prefHeight="25.0" prefWidth="141.0" text="Criterioevaluación">
+      <Label layoutX="9.0" layoutY="325.0" prefHeight="25.0" prefWidth="158.0" text="Criterioevaluación">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

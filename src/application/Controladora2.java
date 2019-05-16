@@ -63,4 +63,15 @@ public class Controladora2 {
 	      ventana.setScene(scene);
 	      ventana.show();
 	}
+	
+	public void Empresa(ActionEvent event) throws IOException{
+		
+		  FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_5_tabla_empresa.fxml"));
+	 	  AnchorPane ventanaDos = (AnchorPane) loader.load();
+	      Stage ventana = new Stage();
+	      ventana.setTitle("Ventana empresa");
+	      Scene scene = new Scene(ventanaDos);
+	      ventana.setScene(scene);
+	      ventana.show();
+	}
 }

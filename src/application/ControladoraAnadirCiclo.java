@@ -9,6 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ControladoraAnadirCiclo {
@@ -20,25 +21,25 @@ public class ControladoraAnadirCiclo {
 	private Button CANCELAR;
 	
 	@FXML
-	private TableColumn<Ciclo,String> ID_ciclo;
+    private TextField ID_cicloTextField;
 
 	@FXML
-	private TableColumn<Ciclo,String> numdecurso;
+    private TextField numdecursoTextField;
 	
 	@FXML
-	private TableColumn<Ciclo,String> Cicloformativo;
+    private TextField CicloformativoTextField;
 	
 	@FXML
-	private TableColumn<Ciclo,String>  Familiaprofesional;
+    private TextField  FamiliaprofesionalTextField;
 	
 	@FXML
-	private TableColumn<Ciclo,String> Capacidadesterminales;
+    private TextField CapacidadesterminalesTextField;
 	
 	@FXML
-	private TableColumn<Ciclo,String>  Actividadesformativos;
+    private TextField  ActividadesformativosTextField;
 	
 	@FXML
-	private TableColumn<Ciclo,String>  Criterioevaluación;
+    private TextField  CriterioevaluacionTextField;
 	
 	
    private Stage ventana;
@@ -59,7 +60,7 @@ public class ControladoraAnadirCiclo {
         if (datosValidos()) {
             Conexion conexionBBDD = new Conexion();
             try {
-				conexionBBDD.InsertarCiclo( ID_ciclo.getText(), numdecurso.getText(), Cicloformativo.getText(), Familiaprofesional.getText(), Capacidadesterminales.getText(), Actividadesformativos.getText(), Criterioevaluación.getText());
+				conexionBBDD.InsertarCiclo( ID_cicloTextField.getText(), numdecursoTextField.getText(), CicloformativoTextField.getText(), FamiliaprofesionalTextField.getText(), CapacidadesterminalesTextField.getText(), ActividadesformativosTextField.getText(), CriterioevaluacionTextField.getText());
 			} catch (SQLException e) {
 				// TODO Bloque catch generado automáticamente
 				e.printStackTrace();
@@ -84,29 +85,29 @@ public class ControladoraAnadirCiclo {
         String mensajeError = "";
 
         //Compruebo los campos
-        if (ID_ciclo.getText() == null || ID_ciclo.getText().length() == 0) {
+        if (ID_cicloTextField.getText() == null || ID_cicloTextField.getText().length() == 0) {
             mensajeError += "ID_Instituto no válido.\n"; 
         }
-        if ( numdecurso.getText() == null ||  numdecurso.getText().length() == 0) {
+        if ( numdecursoTextField.getText() == null ||  numdecursoTextField.getText().length() == 0) {
             mensajeError += "NombreCentro no válidos.\n"; 
         }
-        if (Cicloformativo.getText() == null || Cicloformativo.getText().length() == 0) {
+        if (CicloformativoTextField.getText() == null || CicloformativoTextField.getText().length() == 0) {
             mensajeError += "Profesor_Tutor no válida.\n"; 
         }
 
-        if (Familiaprofesional.getText() == null ||  Familiaprofesional.getText().length() == 0) {
+        if (FamiliaprofesionalTextField.getText() == null ||  FamiliaprofesionalTextField.getText().length() == 0) {
             mensajeError += "FAX no válido.\n"; 
         } 
 
-        if ( Capacidadesterminales.getText() == null ||  Capacidadesterminales.getText().length() == 0) {
+        if ( CapacidadesterminalesTextField.getText() == null ||  CapacidadesterminalesTextField.getText().length() == 0) {
             mensajeError += "Director no válida.\n"; 
         }
 
-        if ( Actividadesformativos.getText() == null ||  Actividadesformativos.getText().length() == 0) {
+        if ( ActividadesformativosTextField.getText() == null ||  ActividadesformativosTextField.getText().length() == 0) {
             mensajeError += "NIFDirector no válida.\n";
         } 
         
-        if (Criterioevaluación.getText() == null || Criterioevaluación.getText().length() == 0) {
+        if (CriterioevaluacionTextField.getText() == null || CriterioevaluacionTextField.getText().length() == 0) {
             mensajeError += "Telefono no válida.\n";
         } 
         

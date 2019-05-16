@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ControladoraModificarCiclo {
@@ -17,25 +18,25 @@ public class ControladoraModificarCiclo {
 	private Button CANCELAR;
 	
 	@FXML
-	private TableColumn<Ciclo,String> ID_ciclo;
+    private TextField ID_cicloTextField;
 
 	@FXML
-	private TableColumn<Ciclo,String> numdecurso;
+    private TextField numdecursoTextField;
 	
 	@FXML
-	private TableColumn<Ciclo,String> Cicloformativo;
+    private TextField CicloformativoTextField;
 	
 	@FXML
-	private TableColumn<Ciclo,String>  Familiaprofesional;
+    private TextField  FamiliaprofesionalTextField;
 	
 	@FXML
-	private TableColumn<Ciclo,String> Capacidadesterminales;
+    private TextField CapacidadesterminalesTextField;
 	
 	@FXML
-	private TableColumn<Ciclo,String>  Actividadesformativos;
+    private TextField  ActividadesformativosTextField;
 	
 	@FXML
-	private TableColumn<Ciclo,String>  Criterioevaluación;
+    private TextField  CriterioevaluacionTextField;
 		
 		private Stage ventana;
 		private Ciclo ciclo; 
@@ -52,13 +53,13 @@ public class ControladoraModificarCiclo {
 	    public void setCiclo(Ciclo ciclo) {
 	        this.ciclo = ciclo;
 
-	        ID_ciclo.setText(ciclo.getID_ciclo());
-	        numdecurso.setText(ciclo.getNumdecurso());
-	        Cicloformativo.setText(ciclo.getCicloformativo());
-	        Familiaprofesional.setText(ciclo.getFamiliaprofesional());
-	        Capacidadesterminales.setText(ciclo.getCapacidadesterminales());
-	        Actividadesformativos.setText(ciclo.getActividadesformativos());
-	        Criterioevaluación.setText(ciclo.getCriterioevaluación());
+	        ID_cicloTextField.setText(ciclo.getID_ciclo());
+	        numdecursoTextField.setText(ciclo.getNumdecurso());
+	        CicloformativoTextField.setText(ciclo.getCicloformativo());
+	        FamiliaprofesionalTextField.setText(ciclo.getFamiliaprofesional());
+	        CapacidadesterminalesTextField.setText(ciclo.getCapacidadesterminales());
+	        ActividadesformativosTextField.setText(ciclo.getActividadesformativos());
+	        CriterioevaluacionTextField.setText(ciclo.getCriterioevaluacion());
 	        
 	    }
 		
@@ -74,7 +75,7 @@ public class ControladoraModificarCiclo {
 	        if (datosValidos()) {
 	            Conexion conexionBBDD = new Conexion();
 	            try {
-					conexionBBDD.ModificarCiclo(ID_ciclo.getText(), numdecurso.getText(), Cicloformativo.getText(), Familiaprofesional.getText(), Capacidadesterminales.getText(), Actividadesformativos.getText(), Criterioevaluación.getText());
+					conexionBBDD.ModificarCiclo(ID_cicloTextField.getText(), numdecursoTextField.getText(), CicloformativoTextField.getText(), FamiliaprofesionalTextField.getText(), CapacidadesterminalesTextField.getText(), ActividadesformativosTextField.getText(), CriterioevaluacionTextField.getText());
 				} catch (SQLException e) {
 					// TODO Bloque catch generado automáticamente
 					e.printStackTrace();
@@ -99,29 +100,29 @@ public class ControladoraModificarCiclo {
 	        String mensajeError = "";
 
 	        //Compruebo los campos
-	        if (ID_ciclo.getText() == null || ID_ciclo.getText().length() == 0) {
+	        if (ID_cicloTextField.getText() == null || ID_cicloTextField.getText().length() == 0) {
 	            mensajeError += "DNI_Alumno no válido.\n"; 
 	        }
-	        if (numdecurso.getText() == null || numdecurso.getText().length() == 0) {
+	        if (numdecursoTextField.getText() == null || numdecursoTextField.getText().length() == 0) {
 	            mensajeError += "Nombre no válidos.\n"; 
 	        }
-	        if (Cicloformativo.getText() == null || Cicloformativo.getText().length() == 0) {
+	        if (CicloformativoTextField.getText() == null || CicloformativoTextField.getText().length() == 0) {
 	            mensajeError += "Apellido no válida.\n"; 
 	        }
 
-	        if (Familiaprofesional.getText() == null || Familiaprofesional.getText().length() == 0) {
+	        if (FamiliaprofesionalTextField.getText() == null || FamiliaprofesionalTextField.getText().length() == 0) {
 	            mensajeError += "Telefono no válido.\n"; 
 	        } 
 
-	        if (Capacidadesterminales.getText() == null || Capacidadesterminales.getText().length() == 0) {
+	        if (CapacidadesterminalesTextField.getText() == null || CapacidadesterminalesTextField.getText().length() == 0) {
 	            mensajeError += "Provincia no válida.\n"; 
 	        }
 
-	        if (Actividadesformativos.getText() == null || Actividadesformativos.getText().length() == 0) {
+	        if (ActividadesformativosTextField.getText() == null || ActividadesformativosTextField.getText().length() == 0) {
 	            mensajeError += "Localidad no válida.\n";
 	        } 
 	        
-	        if (Criterioevaluación.getText() == null || Criterioevaluación.getText().length() == 0) {
+	        if (CriterioevaluacionTextField.getText() == null || CriterioevaluacionTextField.getText().length() == 0) {
 	            mensajeError += "Correoelectronico no válida.\n";
 	        } 
 	       

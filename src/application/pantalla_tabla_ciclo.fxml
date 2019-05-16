@@ -9,17 +9,17 @@
    <children>
       <TableView fx:id="Tabla" layoutX="26.0" layoutY="25.0" prefHeight="309.0" prefWidth="758.0">
         <columns>
-          <TableColumn fx:id="ID_ciclo" prefWidth="68.0" text="ID_ciclo" />
-          <TableColumn fx:id="numdecurso" prefWidth="79.0" text="numdecurso" />
-            <TableColumn fx:id="Cicloformativo" prefWidth="94.0" text="Cicloformativo" />
-            <TableColumn fx:id="Familiaprofesional" prefWidth="114.0" text="Familiaprofesional" />
-            <TableColumn fx:id="Capacidadesterminales" prefWidth="140.0" text="Capacidadesterminales" />
-            <TableColumn fx:id="Actividadesformativos" prefWidth="134.0" text="Actividadesformativos" />
-            <TableColumn prefWidth="127.0" text="Criterioevaluación" />
+          <TableColumn fx:id="ColID_ciclo" prefWidth="68.0" text="ID_ciclo" />
+          <TableColumn fx:id="Colnumdecurso" prefWidth="79.0" text="numdecurso" />
+            <TableColumn fx:id="ColCicloformativo" prefWidth="94.0" text="Cicloformativo" />
+            <TableColumn fx:id="ColFamiliaprofesional" prefWidth="114.0" text="Familiaprofesional" />
+            <TableColumn fx:id="ColCapacidadesterminales" prefWidth="140.0" text="Capacidadesterminales" />
+            <TableColumn fx:id="ColActividadesformativos" prefWidth="134.0" text="Actividadesformativos" />
+            <TableColumn fx:id="ColCriterioevaluacion" prefWidth="127.0" text="Criterioevaluacion" />
         </columns>
       </TableView>
-      <Button fx:id="Anadir" layoutX="190.0" layoutY="348.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="87.0" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
-      <Button fx:id="Modificar" layoutX="353.0" layoutY="348.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="103.0" text="MODIFICAR " textFill="#c9779b" />
-      <Button fx:id="Mostrar" layoutX="533.0" layoutY="348.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="87.0" text="MOSTRAR" textFill="#c9779b" />
+      <Button fx:id="Anadir" layoutX="190.0" layoutY="348.0" mnemonicParsing="false" onAction="#Anadir" prefHeight="55.0" prefWidth="87.0" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
+      <Button fx:id="Modificar" layoutX="353.0" layoutY="348.0" mnemonicParsing="false" onAction="#Modificar" prefHeight="55.0" prefWidth="103.0" text="MODIFICAR " textFill="#c9779b" />
+      <Button fx:id="Mostrar" layoutX="533.0" layoutY="348.0" mnemonicParsing="false" onAction="#Mostrar" prefHeight="55.0" prefWidth="87.0" text="MOSTRAR" textFill="#c9779b" />
    </children>
 </AnchorPane>

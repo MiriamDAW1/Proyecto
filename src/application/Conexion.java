@@ -178,7 +178,7 @@ public class Conexion {
 			try {
 				Statement stmt = Conexion.createStatement();
 				ResultSet rset = stmt.executeQuery("SELECT ID_ciclo, numdecurso,  Cicloformativo, Familiaprofesional, Capacidadesterminales, Actividadesformativos, "
-				+ "Criterioevaluación FROM " + Schema + ".INSTITUTO");
+				+ "Criterioevaluacion FROM " + Schema + ".CICLO");
 				while(rset.next()) {
 					String ID_ciclo  = rset.getString(1);
 					String numdecurso = rset.getString(2); 
@@ -186,8 +186,8 @@ public class Conexion {
 					String Familiaprofesional  = rset.getString(4);
 					String Capacidadesterminales = rset.getString(5);
 					String Actividadesformativos = rset.getString(6);
-					String Criterioevaluación = rset.getString(7); 
-					Ciclo auxCiclo = new Ciclo(ID_ciclo, numdecurso,Cicloformativo,Familiaprofesional,Capacidadesterminales,Actividadesformativos,Criterioevaluación);
+					String Criterioevaluacion = rset.getString(7); 
+					Ciclo auxCiclo = new Ciclo(ID_ciclo, numdecurso,Cicloformativo,Familiaprofesional,Capacidadesterminales,Actividadesformativos,Criterioevaluacion);
 					aux.add(auxCiclo);
 				}
 				rset.close();
@@ -200,22 +200,122 @@ public class Conexion {
 			
 		}
 	public static int InsertarCiclo(String iD_ciclo, String numdecurso, String cicloformativo, String familiaprofesional,
-			String capacidadesterminales, String actividadesformativos, String criterioevaluación) throws SQLException{
+			String capacidadesterminales, String actividadesformativos, String criterioevaluacion) throws SQLException{
 	
 		Statement stmt = Conexion.createStatement();//Introduce los datos
 	
 		//INSERT INTO SCHEMA.NOMBRE_TABLA VALUES ();
-		System.out.println("INSERT INTO " + Schema + ".INSTITUTO VALUES (" + iD_ciclo + "," + "'" + numdecurso  +  "'" + "," + "'" + cicloformativo  +  "'" + "," +  familiaprofesional + "," + "'" + capacidadesterminales +  "'" + "," + "'" + actividadesformativos  + "'" + "," + criterioevaluación + ")");
-		int num = stmt.executeUpdate("INSERT INTO " + Schema + ".INSTITUTO VALUES (" + iD_ciclo + "," + "'" + numdecurso  +  "'" + "," + "'" + cicloformativo  +  "'" + "," +  familiaprofesional + "," + "'" + capacidadesterminales +  "'" + "," + "'" + actividadesformativos  + "'" + "," + criterioevaluación + ")");
+		System.out.println("INSERT INTO " + Schema + ".CICLO VALUES (" + iD_ciclo + ","  + numdecurso  + "," + "'" + cicloformativo  +  "'" + "," + "'" + familiaprofesional + "'" + "," + "'" + capacidadesterminales +  "'" + "," + "'" + actividadesformativos  + "'" + "," +  "'" + criterioevaluacion + "'" + ")");
+		int num = stmt.executeUpdate("INSERT INTO " + Schema + ".CICLO VALUES (" + iD_ciclo + ","  + numdecurso  + "," + "'" + cicloformativo  +  "'" + "," + "'" + familiaprofesional + "'" + "," + "'" + capacidadesterminales +  "'" + "," + "'" + actividadesformativos  + "'" + "," +  "'" + criterioevaluacion + "'" + ")");
 		return num;
 	}
 
 	public static int ModificarCiclo(String iD_ciclo, String numdecurso, String cicloformativo, String familiaprofesional,
-			String capacidadesterminales, String actividadesformativos, String criterioevaluación) throws SQLException{
+			String capacidadesterminales, String actividadesformativos, String criterioevaluacion) throws SQLException{
 		Statement stmt = Conexion.createStatement();
-		System.out.println("UPDATE " + Schema + " .INSTITUTO SET ID_ciclo=" + iD_ciclo + "," + "numdecurso=" +  "'" + numdecurso + "'" + "," +  "cicloformativo="  +  "'" + cicloformativo + "'" + "," + "familiaprofesional=" + familiaprofesional + "," + "capacidadesterminales="  +  "'" + capacidadesterminales  +  "'" + "," + "actividadesformativos="  +  "'" + actividadesformativos  +  "'" + "," + "criterioevaluacion=" + criterioevaluación  + " WHERE ID_ciclo="+ iD_ciclo);
-		int num =stmt.executeUpdate("UPDATE " + Schema + " .INSTITUTO SET ID_ciclo=" + iD_ciclo + "," + "numdecurso=" +  "'" + numdecurso + "'" + "," +  "cicloformativo="  +  "'" + cicloformativo + "'" + "," + "familiaprofesional=" + familiaprofesional + "," + "capacidadesterminales="  +  "'" + capacidadesterminales  +  "'" + "," + "actividadesformativos="  +  "'" + actividadesformativos  +  "'" + "," + "criterioevaluacion=" + criterioevaluación  + " WHERE ID_ciclo="+ iD_ciclo);
+		System.out.println("UPDATE " + Schema + " .CICLO SET ID_ciclo=" + iD_ciclo + "," + "numdecurso=" + numdecurso +  "," +  "cicloformativo="  +  "'" + cicloformativo + "'" + "," + "familiaprofesional=" + "'" + familiaprofesional + "'" + "," + "capacidadesterminales="  +  "'" + capacidadesterminales  +  "'" + "," + "actividadesformativos="  +  "'" + actividadesformativos  +  "'" + "," + "criterioevaluacion=" + "'" + criterioevaluacion + "'" + " WHERE ID_ciclo="+ iD_ciclo);
+		int num =stmt.executeUpdate("UPDATE " + Schema + " .CICLO SET ID_ciclo=" + iD_ciclo + "," + "numdecurso=" + numdecurso +  "," +  "cicloformativo="  +  "'" + cicloformativo + "'" + "," + "familiaprofesional=" + "'" + familiaprofesional + "'" + "," + "capacidadesterminales="  +  "'" + capacidadesterminales  +  "'" + "," + "actividadesformativos="  +  "'" + actividadesformativos  +  "'" + "," + "criterioevaluacion=" + "'" + criterioevaluacion + "'" + " WHERE ID_ciclo="+ iD_ciclo);
+		return num;
+	}
+	
+	public ObservableList<Empresa> Consulta3() {
+		
+		ObservableList<Empresa> aux = FXCollections.observableArrayList();
+			
+			try {
+				Statement stmt = Conexion.createStatement();
+				ResultSet rset = stmt.executeQuery("SELECT  ID_Convenio, Nombre,  Provincia, CIF, Pais, Ciudad, "
+				+ " Direccion,CP,Telefono,Fax,Fecha_firma FROM " + Schema + ".empresa");
+				while(rset.next()) {
+					String ID_Convenio = rset.getString(1);
+					String Nombre = rset.getString(2); 
+					String Provincia = rset.getString(3);
+					String CIF  = rset.getString(4);
+					String Pais = rset.getString(5);
+					String Ciudad = rset.getString(6);
+					String Direccion = rset.getString(7); 
+					String CP = rset.getString(8); 
+					String Telefono = rset.getString(9); 
+					String Fax = rset.getString(10);
+					String Fecha_firma = rset.getString(11);
+					Empresa auxempresa = new Empresa(ID_Convenio, Nombre,Provincia,CIF,Pais,Ciudad,Direccion,CP,Telefono,Fax,Fecha_firma);
+					aux.add(auxempresa);
+				}
+				rset.close();
+				stmt.close();
+				
+			}catch (SQLException s){
+				s.printStackTrace();
+			}
+			return aux;
+		}
+
+	public static int InsertarEmpresa(String iD_Convenio, String nombre, String provincia, String cIF, String pais, String ciudad,
+			String direccion, String cP, String telefono, String fax, String fecha_firma) throws SQLException{
+
+	Statement stmt = Conexion.createStatement();//Introduce los datos
+
+	//INSERT INTO SCHEMA.NOMBRE_TABLA VALUES ();
+	System.out.println("INSERT INTO " + Schema + ".empresa VALUES (" + iD_Convenio + "," + "'" + nombre  +  "'" + "," + "'" + provincia  +  "'" + "," +  "'" + cIF + "'" + "," + "'" + pais +  "'" + "," + "'" + ciudad  + "'" + "," + "'" + direccion +  "'" + "," + cP  + "," + telefono + "," + "'" + fax + "'" + "," + fecha_firma +")");
+	int num = stmt.executeUpdate("INSERT INTO " + Schema + ".empresa VALUES (" + iD_Convenio + "," + "'" + nombre  +  "'" + "," + "'" + provincia  +  "'" + "," +  "'" + cIF + "'" + "," + "'" + pais +  "'" + "," + "'" + ciudad  + "'" + "," + "'" + direccion +  "'" + "," + cP  + "," + telefono + "," + "'" + fax + "'" + "," + fecha_firma +")");
+	return num;
+	}
+
+	public static int ModificarEmpresa(String iD_Convenio, String nombre, String provincia, String cIF, String pais, String ciudad,
+			String direccion, String cP, String telefono, String fax, String fecha_firma) throws SQLException{
+	Statement stmt = Conexion.createStatement();
+	System.out.println("UPDATE " + Schema + " .empresa SET iD_Convenio=" + iD_Convenio + "," + "nombre=" +  "'" + nombre + "'" + "," +  "provincia="  +  "'" + provincia + "'" + "," + "cIF=" + cIF + "," + "pais="  +  "'" + pais  +  "'" + "," + "ciudad="  +  "'" + ciudad  +  "'" + "," + "direccion=" + "'" + direccion + "'" + "," + "cP=" + cP  + "," + "telefono=" + telefono  + "," + "fax=" + "'" + fax + "'" + "," + "fecha_firma=" + fecha_firma + " WHERE iD_Convenio="+ iD_Convenio);
+	int num =stmt.executeUpdate("UPDATE " + Schema + " .empresa SET iD_Convenio=" + iD_Convenio + "," + "nombre=" +  "'" + nombre + "'" + "," +  "provincia="  +  "'" + provincia + "'" + "," + "cIF=" + cIF + "," + "pais="  +  "'" + pais  +  "'" + "," + "ciudad="  +  "'" + ciudad  +  "'" + "," + "direccion=" + "'" + direccion + "'" + "," + "cP=" + cP  + "," + "telefono=" + telefono  + "," + "fax=" + "'" + fax + "'" + "," + "fecha_firma=" + fecha_firma + " WHERE iD_Convenio="+ iD_Convenio);
+	return num;
+	}
+	
+	public ObservableList<Tutor_empresa> Consulta4() {
+		
+		ObservableList<Tutor_empresa> aux = FXCollections.observableArrayList();
+			
+			try {
+				Statement stmt = Conexion.createStatement();
+				ResultSet rset = stmt.executeQuery("SELECT DNI_Tutor, Telefono, Nacionalidad, Apellido, Nombre, Provincia, "
+				+ "Localidad, Correo_electronico, ID_Convenio FROM " + Schema + ".TUTOR_EMPRESA");
+				while(rset.next()) {
+					String DNI_Tutor  = rset.getString(1);
+					String Telefono = rset.getString(2); 
+					String Nacionalidad = rset.getString(3);
+					String Apellido  = rset.getString(4);
+					String Nombre = rset.getString(5);
+					String Provincia = rset.getString(6);
+					String Localidad = rset.getString(7); 
+					String Correo_electronico = rset.getString(8); 
+					String ID_Convenio = rset.getString(9); 
+					Tutor_empresa auxTutor = new Tutor_empresa(DNI_Tutor, Telefono,Nacionalidad,Apellido,Nombre,Provincia,Localidad,Correo_electronico,ID_Convenio);
+					aux.add(auxTutor);
+				}
+				rset.close();
+				stmt.close();
+				
+			}catch (SQLException s){
+				s.printStackTrace();
+			}
+			return aux;
+			
+		}
+	
+	public static int InsertarTutor(String dNI_Tutor, String telefono, String nacionalidad, String apellido, String nombre,
+			String provincia, String localidad, String correo_electronico, String iD_Convenio) throws SQLException{
+	
+		Statement stmt = Conexion.createStatement();//Introduce los datos
+	
+		//INSERT INTO SCHEMA.NOMBRE_TABLA VALUES ();
+		System.out.println("INSERT INTO " + Schema + ".TUTOR_EMPRESA VALUES (" + dNI_Tutor + "," + "'" + telefono  +  "'" + "," + "'" + nacionalidad  +  "'" + "," +  apellido + "," + "'" + nombre +  "'" + "," + "'" + provincia  + "'" + "," + localidad +  "'" + correo_electronico  + "'" + "," +"'" + iD_Convenio  + "'" + ")");
+		int num = stmt.executeUpdate("INSERT INTO " + Schema + ".TUTOR_EMPRESA VALUES (" + dNI_Tutor + "," + "'" + telefono  +  "'" + "," + "'" + nacionalidad  +  "'" + "," +  apellido + "," + "'" + nombre +  "'" + "," + "'" + provincia  + "'" + "," + localidad +  "'" + correo_electronico  + "'" + "," +"'" + iD_Convenio  + "'" + ")");
 		return num;
 	}
 
+	public static int ModificarTutor(String dNI_Tutor, String telefono, String nacionalidad, String apellido, String nombre,
+			String provincia, String localidad, String correo_electronico, String iD_Convenio) throws SQLException{
+		Statement stmt = Conexion.createStatement();
+		System.out.println("UPDATE " + Schema + " .TUTOR_EMPRESA SET dNI_Tutor=" + dNI_Tutor + "," + "telefono=" +  "'" + telefono + "'" + "," +  "nacionalidad="  +  "'" + nacionalidad + "'" + "," + "apellido=" + apellido + "," + "nombre="  +  "'" + nombre  +  "'" + "," + "provincia="  +  "'" + provincia  +  "'" + "," + "localidad=" +  "'" + localidad +  "'" + "," + "correo_electronico=" +  "'" + correo_electronico +  "'" +"iD_Convenio=" +  "'" + iD_Convenio +  "'" + " WHERE dNI_Tutor="+ dNI_Tutor);
+		int num =stmt.executeUpdate("UPDATE " + Schema + " .TUTOR_EMPRESA SET dNI_Tutor=" + dNI_Tutor + "," + "telefono=" +  "'" + telefono + "'" + "," +  "nacionalidad="  +  "'" + nacionalidad + "'" + "," + "apellido=" + apellido + "," + "nombre="  +  "'" + nombre  +  "'" + "," + "provincia="  +  "'" + provincia  +  "'" + "," + "localidad=" +  "'" + localidad +  "'" + "," + "correo_electronico=" +  "'" + correo_electronico +  "'" +"iD_Convenio=" +  "'" + iD_Convenio +  "'" + " WHERE dNI_Tutor="+ dNI_Tutor);
+		return num;
+	}
 }

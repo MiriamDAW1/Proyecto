@@ -32,25 +32,25 @@ public class ControladoraTablaCiclo {
 		private TableView<Ciclo> Tabla;
 		
 		@FXML
-		private TableColumn<Ciclo,String> ID_ciclo;
+		private TableColumn<Ciclo,String> ColID_ciclo;
 
 		@FXML
-		private TableColumn<Ciclo,String> numdecurso;
+		private TableColumn<Ciclo,String> Colnumdecurso;
 		
 		@FXML
-		private TableColumn<Ciclo,String> Cicloformativo;
+		private TableColumn<Ciclo,String> ColCicloformativo;
 		
 		@FXML
-		private TableColumn<Ciclo,String>  Familiaprofesional;
+		private TableColumn<Ciclo,String> ColFamiliaprofesional;
 		
 		@FXML
-		private TableColumn<Ciclo,String> Capacidadesterminales;
+		private TableColumn<Ciclo,String> ColCapacidadesterminales;
 		
 		@FXML
-		private TableColumn<Ciclo,String>  Actividadesformativos;
+		private TableColumn<Ciclo,String>  ColActividadesformativos;
 		
 		@FXML
-		private TableColumn<Ciclo,String>  Criterioevaluacion;
+		private TableColumn<Ciclo,String>  ColCriterioevaluacion;
 		
 		
 	   private ObservableList<Ciclo> Ciclo = FXCollections.observableArrayList();
@@ -62,13 +62,13 @@ public class ControladoraTablaCiclo {
 		public void initialize() {
 
 		 // TODO (don't really need to do anything here).
-			 ID_ciclo.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("ID_ciclo"));
-			 numdecurso.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("numdecurso"));
-			 Cicloformativo.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Cicloformativo"));
-			 Familiaprofesional.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Familiaprofesional"));
-			 Capacidadesterminales.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Capacidadesterminales"));
-			 Actividadesformativos.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Actividadesformativos"));
-			 Criterioevaluacion.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Criterioevaluacion"));	
+			ColID_ciclo.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("ID_ciclo"));
+			Colnumdecurso.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("numdecurso"));
+			ColCicloformativo.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Cicloformativo"));
+			ColFamiliaprofesional.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Familiaprofesional"));
+			ColCapacidadesterminales.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Capacidadesterminales"));
+			ColActividadesformativos.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Actividadesformativos"));
+			ColCriterioevaluacion.setCellValueFactory(new PropertyValueFactory<Ciclo,String>("Criterioevaluacion"));	
 		}
 		  
 		
@@ -84,7 +84,7 @@ public class ControladoraTablaCiclo {
 			
 			System.out.println("Añadir Ciclo");
 			
-	 		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_anadir_Ciclos.fxml"));
+	 		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_anadir_ciclos.fxml"));
 	 		AnchorPane ventanaDos = (AnchorPane) loader.load();
 	         Stage ventana = new Stage();
 	         ventana.setTitle("Nuevo Ciclo");
@@ -99,7 +99,7 @@ public class ControladoraTablaCiclo {
 			
 			Ciclo selectedCiclo = Tabla.getSelectionModel().getSelectedItem();
 			
-			FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_modificar_Ciclos.fxml"));
+			FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_modificar_ciclos.fxml"));
 	 		AnchorPane ventanaDos = (AnchorPane) loader.load();
 	         Stage ventana = new Stage();
 	         ControladoraModificarCiclo controller = loader.getController();

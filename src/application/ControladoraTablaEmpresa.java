@@ -127,4 +127,16 @@ public class ControladoraTablaEmpresa {
       ventana.show();
       
 	}
+	
+	public void Tutor_empresa(ActionEvent event) throws IOException{
+			
+		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_tabla_tutor_empresa.fxml"));
+		AnchorPane ventanaDos = (AnchorPane) loader.load();
+		Stage ventana = new Stage();
+		ventana.setTitle("Ventana Tutor_empresa");
+		Scene scene = new Scene(ventanaDos);
+		ventana.setScene(scene);
+		ventana.show();
+      
+	}
 }

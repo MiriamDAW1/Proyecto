@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.Properties;
 
 import javafx.collections.FXCollections;
@@ -221,6 +222,7 @@ public class Conexion {
 	public ObservableList<Empresa> Consulta3() {
 		
 		ObservableList<Empresa> aux = FXCollections.observableArrayList();
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			
 			try {
 				Statement stmt = Conexion.createStatement();
@@ -237,7 +239,8 @@ public class Conexion {
 					String CP = rset.getString(8); 
 					String Telefono = rset.getString(9); 
 					String Fax = rset.getString(10);
-					String Fecha_firma = rset.getString(11);
+					//String Fecha_firma = sdf.format(rset.getDate(11));
+					String Fecha_firma = "02/03/2017";
 					Empresa auxempresa = new Empresa(ID_Convenio, Nombre,Provincia,CIF,Pais,Ciudad,Direccion,CP,Telefono,Fax,Fecha_firma);
 					aux.add(auxempresa);
 				}
@@ -264,8 +267,8 @@ public class Conexion {
 	public static int ModificarEmpresa(String iD_Convenio, String nombre, String provincia, String cIF, String pais, String ciudad,
 			String direccion, String cP, String telefono, String fax, String fecha_firma) throws SQLException{
 	Statement stmt = Conexion.createStatement();
-	System.out.println("UPDATE " + Schema + " .empresa SET iD_Convenio=" + iD_Convenio + "," + "nombre=" +  "'" + nombre + "'" + "," +  "provincia="  +  "'" + provincia + "'" + "," + "cIF=" + cIF + "," + "pais="  +  "'" + pais  +  "'" + "," + "ciudad="  +  "'" + ciudad  +  "'" + "," + "direccion=" + "'" + direccion + "'" + "," + "cP=" + cP  + "," + "telefono=" + telefono  + "," + "fax=" + "'" + fax + "'" + "," + "fecha_firma=" + fecha_firma + " WHERE iD_Convenio="+ iD_Convenio);
-	int num =stmt.executeUpdate("UPDATE " + Schema + " .empresa SET iD_Convenio=" + iD_Convenio + "," + "nombre=" +  "'" + nombre + "'" + "," +  "provincia="  +  "'" + provincia + "'" + "," + "cIF=" + cIF + "," + "pais="  +  "'" + pais  +  "'" + "," + "ciudad="  +  "'" + ciudad  +  "'" + "," + "direccion=" + "'" + direccion + "'" + "," + "cP=" + cP  + "," + "telefono=" + telefono  + "," + "fax=" + "'" + fax + "'" + "," + "fecha_firma=" + fecha_firma + " WHERE iD_Convenio="+ iD_Convenio);
+	System.out.println("UPDATE " + Schema + " .empresa SET iD_Convenio=" + iD_Convenio + "," + "nombre=" +  "'" + nombre + "'" + "," +  "provincia="  +  "'" + provincia + "'" + "," + "cIF=" + "'" + cIF + "'" + "," + "pais="  +  "'" + pais  +  "'" + "," + "ciudad="  +  "'" + ciudad  +  "'" + "," + "direccion=" + "'" + direccion + "'" + "," + "cP=" + cP  + "," + "telefono=" + telefono  + "," + "fax=" + fax  + "," + "fecha_firma=" + "'" + fecha_firma + "'" + " WHERE iD_Convenio="+ iD_Convenio);
+	int num =stmt.executeUpdate("UPDATE " + Schema + " .empresa SET iD_Convenio=" + iD_Convenio + "," + "nombre=" +  "'" + nombre + "'" + "," +  "provincia="  +  "'" + provincia + "'" + "," + "cIF=" + "'" + cIF + "'" + "," + "pais="  +  "'" + pais  +  "'" + "," + "ciudad="  +  "'" + ciudad  +  "'" + "," + "direccion=" + "'" + direccion + "'" + "," + "cP=" + cP  + "," + "telefono=" + telefono  + "," + "fax=" + fax  + "," + "fecha_firma=" + "'" + fecha_firma + "'" + " WHERE iD_Convenio="+ iD_Convenio);
 	return num;
 	}
 	

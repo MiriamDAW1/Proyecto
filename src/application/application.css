@@ -1,1 +1,37 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.background {
+ 	-fx-background-color: #ABEBC6;
+ }
+ 
+ .label{
+ 	-fx-font-size: 12pt;
+ 	-fx-font-family: Candara;
+ 	-fx-text-fill:black;
+ 	-fx-padding: 5px;
+ }
+ 
+ .table{
+ 	-fx-background-color: #E0F7FA;
+ 	-fx-border-color: #90CAF9;
+ 	-fx-padding: 5px;
+ 	
+ }
+
+ 
+ .button{
+ 	-fx-padding: 5px;
+ 	-fx-border-color: #8E44AD;
+ 	-fx-border-width: 2;
+ 	-fx-font-family: Consolas;
+ }
+ 
+ .title{
+ 	-fx-font-size: 27pt;
+ 	-fx-font-family: Bernard MT Condensed;
+ 	-fx-text-fill:black;
+ }
+ 
+ .minitittle{
+ 	-fx-font-size: 49pt;
+ 	-fx-font-family: Bernard MT Condensed;
+ }

@@ -5,25 +5,25 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladoraTablaEmpresa">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="814.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladoraTablaEmpresa">
    <children>
-      <TableView fx:id="Tabla" layoutX="33.0" prefHeight="287.0" prefWidth="649.0">
+      <TableView fx:id="Tabla" layoutX="13.0" layoutY="13.0" prefHeight="274.0" prefWidth="791.0" styleClass="table" stylesheets="@application.css">
          <columns>
-            <TableColumn fx:id="ID_Convenio" prefWidth="75.0" text="ID_Convenio" />
-            <TableColumn fx:id="Nombre" prefWidth="64.0" text="Nombre" />
-            <TableColumn fx:id="Telefono" prefWidth="69.0" text="Telefono" />
-            <TableColumn fx:id="Direccion" prefWidth="61.0" text="Direccion" />
-            <TableColumn fx:id="Ciudad" prefWidth="55.0" text="Ciudad" />
-            <TableColumn fx:id="CIF" prefWidth="31.0" text="CIF" />
-            <TableColumn fx:id="Provincia" prefWidth="68.0" text="Provincia" />
-            <TableColumn fx:id="CP" prefWidth="50.0" text="CP" />
-            <TableColumn fx:id="Fax" prefWidth="48.0" text="FAX" />
+            <TableColumn fx:id="ID_Convenio" prefWidth="99.0" text="ID_Convenio" />
+            <TableColumn fx:id="Nombre" prefWidth="76.0" text="Nombre" />
+            <TableColumn fx:id="Telefono" prefWidth="63.0" text="Telefono" />
+            <TableColumn fx:id="Direccion" prefWidth="70.0" text="Direccion" />
+            <TableColumn fx:id="Ciudad" prefWidth="63.0" text="Ciudad" />
+            <TableColumn fx:id="CIF" prefWidth="59.0" text="CIF" />
+            <TableColumn fx:id="Provincia" prefWidth="75.0" text="Provincia" />
+            <TableColumn fx:id="CP" prefWidth="42.0" text="CP" />
+            <TableColumn fx:id="Fax" prefWidth="54.0" text="FAX" />
             <TableColumn fx:id="Pais" prefWidth="55.0" text="Pais" />
-            <TableColumn fx:id="Fecha_firma" prefWidth="75.0" text="Fecha_firma" />
+            <TableColumn fx:id="Fecha_firma" prefWidth="127.0" text="Fecha_firma" />
          </columns></TableView>
-      <Button fx:id="Anadir" layoutX="71.0" layoutY="314.0" mnemonicParsing="false" onAction="#Anadir" prefHeight="50.0" prefWidth="85.0" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
-      <Button fx:id="Modificar" layoutX="209.0" layoutY="314.0" mnemonicParsing="false" onAction="#Modificar" prefHeight="50.0" prefWidth="106.0" text="MODIFICAR " textFill="#c9779b" />
-      <Button fx:id="Mostrar" layoutX="374.0" layoutY="314.0" mnemonicParsing="false" onAction="#Mostrar" prefHeight="50.0" prefWidth="94.0" text="MOSTRAR" textFill="#c9779b" />
-      <Button fx:id="Tutor_empresa" layoutX="516.0" layoutY="314.0" mnemonicParsing="false" onAction="#Tutor_empresa" prefHeight="50.0" prefWidth="132.0" text="TUTOR DE EMPRESA" textFill="#c9779b" />
+      <Button fx:id="Anadir" layoutX="117.0" layoutY="314.0" mnemonicParsing="false" onAction="#Anadir" prefHeight="50.0" prefWidth="85.0" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
+      <Button fx:id="Modificar" layoutX="264.0" layoutY="314.0" mnemonicParsing="false" onAction="#Modificar" prefHeight="50.0" prefWidth="106.0" text="MODIFICAR " textFill="#c9779b" />
+      <Button fx:id="Mostrar" layoutX="439.0" layoutY="314.0" mnemonicParsing="false" onAction="#Mostrar" prefHeight="50.0" prefWidth="94.0" text="MOSTRAR" textFill="#c9779b" />
+      <Button fx:id="Tutor_empresa" layoutX="604.0" layoutY="314.0" mnemonicParsing="false" onAction="#Tutor_empresa" prefHeight="50.0" prefWidth="132.0" text="TUTOR DE EMPRESA" textFill="#c9779b" />
    </children>
 </AnchorPane>

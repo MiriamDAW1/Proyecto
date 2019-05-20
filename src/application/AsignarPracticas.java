@@ -84,7 +84,7 @@ public class AsignarPracticas {
 		return Horariomanana;
 	}
 
-	public void setHorariomañana(String horariomanana) {
+	public void setHorariomanana(String horariomanana) {
 		Horariomanana = horariomanana;
 	}
 }

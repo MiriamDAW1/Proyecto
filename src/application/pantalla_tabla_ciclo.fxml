@@ -5,21 +5,21 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladoraTablaCiclo">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="1040.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladoraTablaCiclo">
    <children>
-      <TableView fx:id="Tabla" layoutX="26.0" layoutY="25.0" prefHeight="309.0" prefWidth="758.0">
+      <TableView fx:id="Tabla" layoutX="26.0" layoutY="25.0" prefHeight="309.0" prefWidth="997.0" styleClass="table" stylesheets="@application.css">
         <columns>
-          <TableColumn fx:id="ColID_ciclo" prefWidth="68.0" text="ID_ciclo" />
-          <TableColumn fx:id="Colnumdecurso" prefWidth="79.0" text="numdecurso" />
-            <TableColumn fx:id="ColCicloformativo" prefWidth="94.0" text="Cicloformativo" />
-            <TableColumn fx:id="ColFamiliaprofesional" prefWidth="114.0" text="Familiaprofesional" />
-            <TableColumn fx:id="ColCapacidadesterminales" prefWidth="140.0" text="Capacidadesterminales" />
-            <TableColumn fx:id="ColActividadesformativos" prefWidth="134.0" text="Actividadesformativos" />
-            <TableColumn fx:id="ColCriterioevaluacion" prefWidth="127.0" text="Criterioevaluacion" />
+          <TableColumn fx:id="ColID_ciclo" prefWidth="77.0" text="ID_ciclo" />
+          <TableColumn fx:id="Colnumdecurso" prefWidth="100.0" text="numdecurso" />
+            <TableColumn fx:id="ColCicloformativo" prefWidth="117.0" text="Cicloformativo" />
+            <TableColumn fx:id="ColFamiliaprofesional" prefWidth="159.0" text="Familiaprofesional" />
+            <TableColumn fx:id="ColCapacidadesterminales" prefWidth="180.0" text="Capacidadesterminales" />
+            <TableColumn fx:id="ColActividadesformativos" minWidth="0.0" prefWidth="182.0" text="Actividadesformativos" />
+            <TableColumn fx:id="ColCriterioevaluacion" minWidth="0.0" prefWidth="170.0" text="Criterioevaluacion" />
         </columns>
       </TableView>
-      <Button fx:id="Anadir" layoutX="190.0" layoutY="348.0" mnemonicParsing="false" onAction="#Anadir" prefHeight="55.0" prefWidth="87.0" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
-      <Button fx:id="Modificar" layoutX="353.0" layoutY="348.0" mnemonicParsing="false" onAction="#Modificar" prefHeight="55.0" prefWidth="103.0" text="MODIFICAR " textFill="#c9779b" />
-      <Button fx:id="Mostrar" layoutX="533.0" layoutY="348.0" mnemonicParsing="false" onAction="#Mostrar" prefHeight="55.0" prefWidth="87.0" text="MOSTRAR" textFill="#c9779b" />
+      <Button fx:id="Anadir" layoutX="190.0" layoutY="376.0" mnemonicParsing="false" onAction="#Anadir" prefHeight="55.0" prefWidth="87.0" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
+      <Button fx:id="Modificar" layoutX="354.0" layoutY="376.0" mnemonicParsing="false" onAction="#Modificar" prefHeight="55.0" prefWidth="103.0" text="MODIFICAR " textFill="#c9779b" />
+      <Button fx:id="Mostrar" layoutX="532.0" layoutY="376.0" mnemonicParsing="false" onAction="#Mostrar" prefHeight="55.0" prefWidth="87.0" text="MOSTRAR" textFill="#c9779b" />
    </children>
 </AnchorPane>

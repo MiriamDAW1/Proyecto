@@ -5,22 +5,22 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladoraTablaTutor">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="958.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladoraTablaTutor">
    <children>
-      <Button fx:id="Anadir" layoutX="168.0" layoutY="338.0" mnemonicParsing="false" onAction="#Anadir" prefHeight="50.0" prefWidth="74.0" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
-      <Button fx:id="Modificar" layoutX="319.0" layoutY="338.0" mnemonicParsing="false" onAction="#Modificar" prefHeight="50.0" prefWidth="105.0" text="MODIFICAR " textFill="#c9779b" />
-      <Button fx:id="Mostrar" layoutX="499.0" layoutY="338.0" mnemonicParsing="false" onAction="#Mostrar" prefHeight="50.0" prefWidth="80.0" text="MOSTRAR" textFill="#c9779b" />
-      <TableView fx:id="Tabla" layoutX="14.0" prefHeight="333.0" prefWidth="715.0">
+      <Button fx:id="Anadir" layoutX="277.0" layoutY="345.0" mnemonicParsing="false" onAction="#Anadir" prefHeight="50.0" prefWidth="74.0" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
+      <Button fx:id="Modificar" layoutX="429.0" layoutY="345.0" mnemonicParsing="false" onAction="#Modificar" prefHeight="50.0" prefWidth="105.0" text="MODIFICAR " textFill="#c9779b" />
+      <Button fx:id="Mostrar" layoutX="634.0" layoutY="345.0" mnemonicParsing="false" onAction="#Mostrar" prefHeight="50.0" prefWidth="80.0" text="MOSTRAR" textFill="#c9779b" />
+      <TableView fx:id="Tabla" layoutX="16.0" layoutY="11.0" prefHeight="322.0" prefWidth="930.0" styleClass="table" stylesheets="@application.css">
         <columns>
-          <TableColumn fx:id="ColDNI_Tutor" prefWidth="78.0" text="DNI_Tutor" />
-            <TableColumn fx:id="ColTelefono" prefWidth="74.0" text="Telefono" />
-            <TableColumn fx:id="ColNacionalidad" prefWidth="94.0" text="Nacionalidad" />
-            <TableColumn fx:id="ColApellido" prefWidth="75.0" text="Apellido" />
-            <TableColumn fx:id="ColNombre" prefWidth="72.0" text="Nombre" />
-            <TableColumn fx:id="ColProvincia" prefWidth="74.0" text="Provincia" />
-            <TableColumn fx:id="ColLocalidad" prefWidth="62.0" text="Localidad" />
-            <TableColumn fx:id="ColCorreo_electronico" prefWidth="110.0" text="Correo electronico" />
-            <TableColumn fx:id="ColID_Convenio" prefWidth="78.0" text="ID Convenio" />
+          <TableColumn fx:id="ColDNI_Tutor" prefWidth="120.0" text="DNI_Tutor" />
+            <TableColumn fx:id="ColTelefono" prefWidth="107.0" text="Telefono" />
+            <TableColumn fx:id="ColNacionalidad" prefWidth="104.0" text="Nacionalidad" />
+            <TableColumn fx:id="ColApellido" prefWidth="95.0" text="Apellido" />
+            <TableColumn fx:id="ColNombre" prefWidth="81.0" text="Nombre" />
+            <TableColumn fx:id="ColProvincia" prefWidth="78.0" text="Provincia" />
+            <TableColumn fx:id="ColLocalidad" prefWidth="89.0" text="Localidad" />
+            <TableColumn fx:id="ColCorreo_electronico" prefWidth="145.0" text="Correo electronico" />
+            <TableColumn fx:id="ColID_Convenio" prefWidth="97.0" text="ID Convenio" />
         </columns>
       </TableView>
    </children>

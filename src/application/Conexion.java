@@ -327,7 +327,7 @@ public class Conexion {
 			try {
 				Statement stmt = Conexion.createStatement();
 				ResultSet rset = stmt.executeQuery("SELECT ID_Convenio, DNI_Alumno, Fechainicio, Fechafin, Horastotal, Horadia, "
-				+ "Horatarde, Horariomañana FROM " + Schema + ".ACCEDE");
+				+ "Horatarde, Horariomanana FROM " + Schema + ".ACCEDE");
 				while(rset.next()) {
 					String ID_Convenio  = rset.getString(1);
 					String DNI_Alumno = rset.getString(2); 
@@ -336,8 +336,8 @@ public class Conexion {
 					String Horastotal = rset.getString(5);
 					String Horadia = rset.getString(6);
 					String Horatarde = rset.getString(7); 
-					String Horariomañana = rset.getString(8); 
-					AsignarPracticas auxPracticas = new AsignarPracticas(ID_Convenio, DNI_Alumno, Fechainicio, Fechafin, Horastotal, Horadia,Horatarde, Horariomañana);
+					String Horariomanana = rset.getString(8); 
+					AsignarPracticas auxPracticas = new AsignarPracticas(ID_Convenio, DNI_Alumno, Fechainicio, Fechafin, Horastotal, Horadia,Horatarde, Horariomanana);
 					aux.add(auxPracticas);
 				}
 				rset.close();
@@ -351,13 +351,13 @@ public class Conexion {
 		}
 	
 	public static int InsertarPractica(String iD_Convenio, String dNI_Alumno, String fechainicio, String fechafin,
-			String horastotal, String horadia, String horatarde, String horariomañana) throws SQLException{
+			String horastotal, String horadia, String horatarde, String horariomanana) throws SQLException{
 	
 		Statement stmt = Conexion.createStatement();//Introduce los datos
 	
 		//INSERT INTO SCHEMA.NOMBRE_TABLA VALUES ();
-		System.out.println("INSERT INTO " + Schema + ".ACCEDE VALUES (" + iD_Convenio + ","  + "'" + dNI_Alumno + "'" + "," + "'" + fechainicio  +  "'" + "," + "'" + fechafin + "'" + "," + horastotal + "," + horadia + "," + horatarde  + "," + horariomañana +")");
-		int num = stmt.executeUpdate("INSERT INTO " + Schema + ".ACCEDE VALUES (" + iD_Convenio + ","  + "'" + dNI_Alumno + "'" + "," + "'" + fechainicio  +  "'" + "," + "'" + fechafin + "'" + "," + horastotal + "," + horadia + "," + horatarde  + "," + horariomañana +")");
+		System.out.println("INSERT INTO " + Schema + ".ACCEDE VALUES (" + iD_Convenio + ","  + "'" + dNI_Alumno + "'" + "," + "'" + fechainicio  +  "'" + "," + "'" + fechafin + "'" + "," + horastotal + "," + horadia + "," + horatarde  + "," + horariomanana +")");
+		int num = stmt.executeUpdate("INSERT INTO " + Schema + ".ACCEDE VALUES (" + iD_Convenio + ","  + "'" + dNI_Alumno + "'" + "," + "'" + fechainicio  +  "'" + "," + "'" + fechafin + "'" + "," + horastotal + "," + horadia + "," + horatarde  + "," + horariomanana +")");
 		return num;
 	}
 }

@@ -40,4 +40,27 @@ public class ControladoraPrincipal {
 	        ventana.setScene(scene);
 	        ventana.show();
 	 	}
+	   
+
+	   public void AsignarPracticas(ActionEvent event) throws IOException{
+
+	 		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_tabla_asignar_empresa.fxml"));
+	 		AnchorPane ventanaDos = (AnchorPane) loader.load();
+	        Stage ventana = new Stage();
+	        ventana.setTitle("Ventana Asignar Practicas ");
+	        Scene scene = new Scene(ventanaDos);
+	        ventana.setScene(scene);
+	        ventana.show();
+	 	}
+	   
+	   public void GenerarAnexos(ActionEvent event) throws IOException{
+
+	 		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_7_generar_anexos.fxml"));
+	 		AnchorPane ventanaDos = (AnchorPane) loader.load();
+	        Stage ventana = new Stage();
+	        ventana.setTitle("Generar Anexos");
+	        Scene scene = new Scene(ventanaDos);
+	        ventana.setScene(scene);
+	        ventana.show();
+	 	}
 }

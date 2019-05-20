@@ -65,12 +65,12 @@ public class ControladoraTablaTutor {
 
 	 // TODO (don't really need to do anything here).
 		ColDNI_Tutor.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("DNI_Tutor"));
-		ColTelefono.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Telefono "));
-		ColNacionalidad.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Nacionalidad "));
-		ColApellido.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Apellido "));
-		ColNombre.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Nombre "));
-		ColProvincia.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Provincia "));
-		ColLocalidad.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Localidad "));
+		ColTelefono.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Telefono"));
+		ColNacionalidad.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Nacionalidad"));
+		ColApellido.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Apellido"));
+		ColNombre.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Nombre"));
+		ColProvincia.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Provincia"));
+		ColLocalidad.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Localidad"));
 		ColCorreo_electronico.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("Correo_electronico"));
 		ColID_Convenio.setCellValueFactory(new PropertyValueFactory<Tutor_empresa,String>("ID_Convenio"));
 			
@@ -99,21 +99,21 @@ public class ControladoraTablaTutor {
          ventana.show();
  	}
 	
-	/*public void Modificar(ActionEvent event) throws IOException{
+	public void Modificar(ActionEvent event) throws IOException{
 		
 		System.out.println("Modificar Tutor_empresa");
 		
-		Alumno selectedAlumno = Tabla.getSelectionModel().getSelectedItem();
+		Tutor_empresa selectedTutor_empresa = Tabla.getSelectionModel().getSelectedItem();
 		
-		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_4_modificar_alumno.fxml"));
+		FXMLLoader loader = new FXMLLoader(Main.class.getResource("pantalla_modificar_tutor_empresa.fxml"));
  		AnchorPane ventanaDos = (AnchorPane) loader.load();
          Stage ventana = new Stage();
-         ControladoraModificarAlumno controller = loader.getController();
-         controller.setAlumno(selectedAlumno);
+         ControladoraModificarTutor controller = loader.getController();
+         controller.setTutor(selectedTutor_empresa);
          ventana.setTitle("Modificar Tutor");
          Scene scene = new Scene(ventanaDos);
          ventana.setScene(scene);
          ventana.show();
          
- 	}*/
+ 	}
 }

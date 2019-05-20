@@ -7,8 +7,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladoraTablaTutor">
    <children>
-      <Button fx:id="Anadir" layoutX="168.0" layoutY="338.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="74.0" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
-      <Button fx:id="Modificar" layoutX="319.0" layoutY="338.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="105.0" text="MODIFICAR " textFill="#c9779b" />
+      <Button fx:id="Anadir" layoutX="168.0" layoutY="338.0" mnemonicParsing="false" onAction="#Anadir" prefHeight="50.0" prefWidth="74.0" text="AÑADIR" textFill="#c9779b" textOverrun="CLIP" />
+      <Button fx:id="Modificar" layoutX="319.0" layoutY="338.0" mnemonicParsing="false" onAction="#Modificar" prefHeight="50.0" prefWidth="105.0" text="MODIFICAR " textFill="#c9779b" />
       <Button fx:id="Mostrar" layoutX="499.0" layoutY="338.0" mnemonicParsing="false" onAction="#Mostrar" prefHeight="50.0" prefWidth="80.0" text="MOSTRAR" textFill="#c9779b" />
       <TableView fx:id="Tabla" layoutX="14.0" prefHeight="333.0" prefWidth="715.0">
         <columns>

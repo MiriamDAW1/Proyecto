@@ -13,13 +13,13 @@
          </image>
       </ImageView>
       <Button fx:id="Administracion" layoutX="149.0" layoutY="14.0" mnemonicParsing="false" onAction="#Admi" prefHeight="109.0" prefWidth="299.0" text="                 ADMINISTRACION" />
-      <Button fx:id="AsignarPracticas" layoutX="149.0" layoutY="138.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="299.0" text="                       ASIGNAR PRACTICAS" textAlignment="CENTER" />
+      <Button fx:id="AsignarPracticas" layoutX="149.0" layoutY="138.0" mnemonicParsing="false" onAction="#AsignarPracticas" prefHeight="102.0" prefWidth="299.0" text="                       ASIGNAR PRACTICAS" textAlignment="CENTER" />
       <ImageView fitHeight="78.0" fitWidth="95.0" layoutX="166.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@administracion.png" />
          </image>
       </ImageView>
-      <Button fx:id="GenerarAnexos" layoutX="149.0" layoutY="252.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="299.0" text="                      GENERAR ANEXOS" textAlignment="CENTER" />
+      <Button fx:id="GenerarAnexos" layoutX="149.0" layoutY="252.0" mnemonicParsing="false" onAction="#GenerarAnexos" prefHeight="102.0" prefWidth="299.0" text="                      GENERAR ANEXOS" textAlignment="CENTER" />
       <ImageView fitHeight="91.0" fitWidth="78.0" layoutX="166.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@anexos1.png" />
